@@ -1,17 +1,24 @@
-import {useState} from 'react'
+import {useContext, useState} from 'react'
 import { NavLink,Link } from 'react-router-dom'
 import {assets} from "../assets/frontend_assets/assets"
 import '../css/NavBar.css'
+import SearchComponent from './searchComponent'
+import { ShopContext } from '../context/ShopContext'
 
 const NavBar = () => {
   const [visible,setVisible] = useState(false)
+  const {search, setSearch, showSearch, setShowSearch} = useContext(ShopContext);
+  const hideShowSearchbar = () =>{
+    console.log("it is clicked")
+    setShowSearch(prev => !prev)
+    console.log(search)
+  }
+
   return (
     <div className = "navbar">
       <Link to="/">
               <img src={assets.logo} alt="Logo" className='logo'/>
-      </Link>
-      
-
+      </Link>    
         <ul className='menu-items'>
             <NavLink className="list-item" to="/">Home</NavLink>
             <NavLink className="list-item" to="/collection">Collections</NavLink>
@@ -19,8 +26,9 @@ const NavBar = () => {
             <NavLink className="list-item" to="/contact">Contact</NavLink>
         </ul>
         {/*css property to add --- for small screen it is hidden about sm(small screens) it should be flex */}
-        <div className='icons-list'>
-          <img src={assets.search_icon} alt="search-icon"  className='icon'/>
+        <SearchComponent/>
+        <div className='icons-list'>          
+          <img src={assets.search_icon} alt="search-icon"  className='icon' onClick = {hideShowSearchbar}/>
           <div className='profile-container'>
             <img src={assets.profile_icon} alt="profile-icon" className='profile-image icon'/>
             <div className="profile-icon">
