@@ -7,11 +7,12 @@ import { ShopContext } from '../context/ShopContext'
 
 const NavBar = () => {
   const [visible,setVisible] = useState(false)
-  const {search, setSearch, showSearch, setShowSearch} = useContext(ShopContext);
-  const hideShowSearchbar = () =>{
-    console.log("it is clicked")
+  // const {search, setSearch, showSearch, setShowSearch,placedOrderItems} = useContext(ShopContext)
+  const{search,setSearch, showSearch, setShowSearch, placedOrderItems}  = useContext(ShopContext)
+  const hideShowSearchbar = () => {
+    // console.log("it is clicked")
     setShowSearch(prev => !prev)
-    console.log(search)
+    // console.log(search)
   }
 
   return (
@@ -30,22 +31,23 @@ const NavBar = () => {
         <div className='icons-list'>          
           <img src={assets.search_icon} alt="search-icon"  className='icon' onClick = {hideShowSearchbar}/>
           <div className='profile-container'>
-            <img src={assets.profile_icon} alt="profile-icon" className='profile-image icon'/>
+            <Link to="/login"> <img src={assets.profile_icon} alt="profile-icon" className='profile-image icon'/> </Link>
             <div className="profile-icon">
               <p>My Profile</p>
               <p>Orders</p>
               <p>Logout</p>
             </div>
           </div>
-          <Link to="/cart">
-              <img src={assets.cart_icon} alt="cart-icon" className='icon' />
+          <Link to="/cart" style={{textDecoration:"none"}}>
+              <img src={assets.cart_icon} alt="cart-icon" className='icon icon-container' />
+              <p className='total-items-order'>{placedOrderItems}</p>
           </Link>
           <img onClick={ () => setVisible(true)} src={assets.menu_icon} className='menu-icon icon'/>               
         </div>
         <div className={`${visible ? "small-screen-navbar" : "no-small-screen-navbar" }`}>
           <div onClick ={() => setVisible(false)} className='toggle-icon'>
             <img src={assets.cross_icon}/>
-            <p>Back</p>
+            <div>Back</div>
           </div>
             <NavLink onClick={()=>setVisible(false)} className="toggle-item" to="/">Home</NavLink>
             <NavLink onClick={()=>setVisible(false)} className="toggle-item" to="/collection">Collections</NavLink>
