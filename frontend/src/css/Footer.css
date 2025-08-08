@@ -1,0 +1,40 @@
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin:40px 30px;
+}
+
+@media screen and (max-width:500px){
+
+    .logo-details{
+        display: none;
+    }
+
+    .footer{
+        font-size: 15px;
+    }
+}
+
+.logo-details img{
+    width: 140px;
+}
+
+.logo-details p {
+    font-size: 13px;
+}
+
+.company-items li {
+   list-style:none;
+     font-size: 13px;
+}
+
+
+.get-in-touch{
+    font-size: 13px;
+}
+
+.copy-right{
+    text-align: center;
+    margin-top:5px;
+}

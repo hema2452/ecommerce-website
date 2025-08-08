@@ -1,0 +1,35 @@
+.place-order{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+
+.payment-options{
+    display: flex;
+    justify-content: space-between;
+}
+
+.payment-container{
+    border:1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+}
+
+.payment-selection-div{
+    width:13px;
+    height:13px;
+    border-radius: 7px;
+    border:1px solid black;
+    margin-right:4px;
+}
+
+.color{
+    background-color: green;
+}
+
+.payment-container img{
+    width:100px;
+}

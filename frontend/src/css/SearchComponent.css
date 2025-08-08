@@ -1,0 +1,8 @@
+.show-search{
+    display: block;
+    outline: 0;
+}
+
+.hide-search{
+    display: none;
+}

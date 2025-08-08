@@ -1,0 +1,30 @@
+.contact-us-container{
+    display: flex;
+    align-items: center;
+    width:80%;
+    margin:20px auto;
+}
+
+.contact-us-container img{
+    width:300px;
+    margin-right:40px;
+}
+
+form input, textarea{
+    width:250px;
+    border:2px solid black;
+    outline:none;
+    margin:1px;
+    
+}
+
+form button{
+    background-color: black;
+    color:white;
+    padding:10px 15px;
+    outline:none;
+    border:none;
+    cursor:pointer;
+    border-radius:5px;
+}
+

@@ -1,0 +1,23 @@
+.title-component{
+    display: flex;
+    align-items: center;
+    margin-top:60px;
+    font-size: 40px;
+    
+}
+
+
+@media screen and (max-width:1094px) {
+    .title-component{
+        font-size: 30px;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    .title-component{
+        margin-left: 10px;
+        font-size:24px;
+    }
+}
+

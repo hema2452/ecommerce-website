@@ -1,0 +1,184 @@
+.products-data {
+    display: flex;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.products-data img {
+    border-radius: 10px;
+    width: 400px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.product-display-images {
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+
+}
+
+.product-image-container {
+    display: flex;
+    margin-right: 30px;
+
+}
+
+.product-display-images img {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+
+@media screen and (max-width:972px) {
+    .products-data {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .products-data img {
+        border-radius: 10px;
+        width: 300px;
+    }
+
+    .product-display-images img {
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        border-radius: 10px;
+    }
+
+}
+
+@media screen and (max-width:500px) {
+    .products-data img {
+        width: 300px;
+    }
+
+    .product-image-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .product-display-images img {
+        width: 60px;
+        height: 78px;
+        border-radius: 10px;
+    }
+
+    .product-display-images {
+        flex-direction: row;
+        margin-left: 0px;
+
+    }
+}
+
+
+.rating {
+    display: flex;
+
+}
+
+.rating img {
+    width: 10px;
+}
+
+
+.products-data-container {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.product-description {
+    font-size: 13px;
+    width: 300px;
+    margin-top: 14px;
+
+}
+
+
+
+.button-color {
+    margin: 5px;
+    padding: 5px;
+    width: 50px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    outline: 0;
+}
+
+.no-border {
+    border: 3px solid black;
+}
+
+.border-color {
+    border: 3px solid yellow;
+}
+
+
+
+.button {
+    width: 110px;
+    padding: 4px 0px;
+    font-size: 13px;
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+
+}
+
+
+.horizontal {
+    margin: 35px 0px;
+}
+
+.description-review-tab {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    width: 100%;
+    margin:10px;
+    /* padding:4px; */
+}
+
+.border-description span{
+    margin-left:3px;
+    padding:3px;
+    font-size: 16px;
+    background-color: rgb(176, 184, 191);
+    border-radius:3px;
+}
+
+
+.description{
+    margin:5px 3px;
+    padding:3px;
+    background-color: rgb(217, 226, 234);
+    border-radius:3px;
+}
+
+.description p{
+    margin:4px;
+}
